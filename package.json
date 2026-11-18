@@ -1,0 +1,30 @@
+{
+  "name": "daabool-telegram-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "dev": "wrangler dev",
+    "test": "vitest run && node --test scripts/setup.test.mjs scripts/setup-ai.test.mjs scripts/setup-ai-server.test.mjs scripts/activate-ai.test.mjs scripts/setup-contributions.test.mjs scripts/event-store.test.mjs scripts/contributions.test.mjs scripts/runtime.test.mjs",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test",
+    "build": "wrangler deploy --dry-run --outdir dist",
+    "demo:local": "node scripts/demo-product.mjs",
+    "deploy": "npm run check && wrangler deploy",
+    "setup": "node scripts/setup.mjs",
+    "setup:ai": "node scripts/setup-ai.mjs",
+    "setup:ai:browser": "node scripts/setup-ai-server.mjs",
+    "activate:ai": "node scripts/activate-ai.mjs"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261013.1",
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.28.2",
+    "miniflare": "5.20261006.2-beta",
+    "typescript": "^6.0.3",
+    "vitest": "^3.2.7",
+    "wrangler": "^4.150.0"
+  }
+}

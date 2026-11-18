@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "daabool-telegram-bot",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-13",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": { "enabled": false },
+  "ai": { "binding": "AI" },
+  "d1_databases": [{ "binding": "DB", "database_name": "daabool-contributions", "database_id": "00000000-0000-0000-0000-000000000000", "migrations_dir": "migrations" }],
+  "vars": { "AI_FREE_TIER_CONFIRMED": "false", "CONTRIBUTIONS_ENABLED": "false", "PRODUCT_MODE_ENABLED": "false", "PRODUCT_AUTOMATION_ENABLED": "false", "GROUP_AI_ENABLED": "false", "PRODUCT_ALLOWED_GROUP_IDS": "" },
+  "triggers": { "crons": ["* * * * *"] }
+}

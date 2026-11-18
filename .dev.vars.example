@@ -1,0 +1,21 @@
+# Local testing only. Copy to .dev.vars and enter credentials locally.
+TELEGRAM_BOT_TOKEN=
+WEBHOOK_SECRET_TOKEN=
+# Contributions need a local D1 binding and migrations before enabling.
+CONTRIBUTIONS_ENABLED=false
+# SHA-256 hex digest only. Never put the owner setup token itself here.
+OWNER_SETUP_TOKEN_HASH=
+# Assistant AI: keep real keys in .dev.vars (ignored) or Worker secrets.
+# Apply all D1 migrations before enabling. No key means the old bot keeps working.
+GROQ_API_KEY=
+GROQ_MODEL=openai/gpt-oss-120b
+GROQ_ENABLED=true
+# Optional fallback provider; its account quota is independent.
+GEMINI_API_KEY=
+GEMINI_MODEL=gemini-3.6-flash
+# New deterministic product. OFF until additive migrations + private staging verification.
+PRODUCT_MODE_ENABLED=false
+PRODUCT_AUTOMATION_ENABLED=false
+GROUP_AI_ENABLED=false
+# Numeric negative group IDs only, comma-separated. No invite links/usernames.
+PRODUCT_ALLOWED_GROUP_IDS=
